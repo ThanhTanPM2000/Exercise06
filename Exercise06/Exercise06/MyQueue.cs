@@ -18,7 +18,7 @@ namespace ConsoleApp3
 
         public bool IsEmpty()
         {
-            return top == -1 ? true : false;
+            return top == 0 ? true : false;
         }
 
         public bool IsFull()
