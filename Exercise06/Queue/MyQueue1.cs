@@ -3,22 +3,21 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Collections;
 
-namespace ConsoleApp3
+namespace Queue
 {
-    class MyQueue
+    class MyQueue1
     {
         int top, i;
         string[] array;
         string a;
 
-        public MyQueue(int item)
+        public MyQueue1(int item)
         {
             array = new string[item];
             top = -1;
         }
-        
+
         public void Enqueue(string item)
         {
             array[top + 1] = item;
@@ -28,9 +27,9 @@ namespace ConsoleApp3
         public string Dequeue()
         {
             string a;
-            i++;
-            a = array[i];
+            a = array[top];
             top--;
+            i++;
             return a;
         }
 
@@ -41,8 +40,7 @@ namespace ConsoleApp3
 
         public int count()
         {
-            return top +1;
+            return top + 1;
         }
-
     }
 }

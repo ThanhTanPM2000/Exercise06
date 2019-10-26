@@ -3,46 +3,44 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Collections;
 
-namespace ConsoleApp3
+namespace MyQueueOfMe
 {
-    class MyQueue
+    class MyQueue123
     {
-        int top, i;
+        int top, i, length;
         string[] array;
-        string a;
 
-        public MyQueue(int item)
+        public MyQueue123(int digit)
         {
-            array = new string[item];
+            array = new string[digit];
             top = -1;
         }
-        
-        public void Enqueue(string item)
+
+        public void EnQueue(string item)
         {
             array[top + 1] = item;
             top++;
+            length = top+1;
         }
 
-        public string Dequeue()
+        public string DeQueue()
         {
-            string a;
+            string a = array[i];
             i++;
-            a = array[i];
-            top--;
+            top++;
+            length = top - i;
             return a;
         }
 
         public string Peek()
-        {
+        {       
             return array[i];
         }
 
         public int count()
         {
-            return top +1;
+            return length;
         }
-
     }
 }
