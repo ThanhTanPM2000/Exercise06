@@ -28,8 +28,7 @@ namespace MyQueueOfMe
         {
             string a = array[i];
             i++;
-            top++;
-            length = top - i;
+            length = length - 1;
             return a;
         }
 
